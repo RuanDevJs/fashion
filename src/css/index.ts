@@ -1,4 +1,15 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
+
+const Left = keyframes`
+  from {
+    opacity: 0.72;
+    width: 12vw;
+  }
+  to {
+    opacity: 1;
+    width: 50vw;
+  }
+`;
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -19,8 +30,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   img{
-    /* max-width: 100%; */
-    /* object-fit: cover; */
+    max-width: 100%;
+    object-fit: cover;
   }
 
   .z-index {
@@ -30,29 +41,38 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Main = styled.main`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100%;
-  position: relative;
-
-  /* overflow: hidden; */
-`;
-
-export const Container = styled.div`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: 10;
   padding: 1rem;
-`;
+  height: 100vh;
 
-export const Wrap = styled.div`
-  /* position: absolute;
-  width: 100%;
-  height: 100%;
+  &::before {
+    content: "";
+    display: block;
 
-  z-index: 10;
-  padding: 1rem; */
+    /* width: 50vw; */
+    height: 100vh;
+
+    background-color: rgba(10, 10, 67, 1);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    animation: ${Left} forwards 1s;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+
+    width: 50vw;
+    height: 100%;
+
+    background-color: rgba(251, 194, 195, 1);
+
+    position: absolute;
+    top: 0;
+    left: 50vw;
+
+    animation: ${Left} forwards 1s;
+  }
 `;

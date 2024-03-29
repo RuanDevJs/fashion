@@ -27,7 +27,7 @@ const AnimateYear = keyframes`
 const AnimateImage = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, 100px, 0);
   }
   to {
     opacity: 1;
@@ -40,7 +40,10 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+
+  position: relative;
+  z-index: 1000;
 `;
 
 export const Heading = styled.div`
@@ -55,11 +58,11 @@ export const Heading = styled.div`
   animation: ${AnimateText} forwards 0.72s;
   animation-delay: 0.32s;
 
-  transition: 0.32s ease-in-out;
+  transition: 0.72s ease-in-out;
 `;
 
 export const Title = styled.h2`
-  font-size: 60px;
+  font-size: 5rem;
 
   margin: auto;
   transform: rotate(-90deg);
@@ -67,13 +70,12 @@ export const Title = styled.h2`
 
 export const Year = styled.div`
   opacity: 0;
-  font-size: 80px;
+  font-size: 4.5rem;
   font-weight: bold;
 
   margin: auto;
   animation: ${AnimateYear} forwards 0.72s;
-  animation-delay: 0.52s;
-  transition: 0.32s ease-in-out;
+  animation-delay: 0.82s;
 
   span {
     transform: rotate(90deg);
@@ -82,15 +84,15 @@ export const Year = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  height: 520px;
+  height: 80%;
 
   opacity: 0;
 
   object-fit: contain;
   border-radius: 12px;
 
-  animation: ${AnimateImage} forwards 0.72s;
-  transition: 0.32s ease-in-out;
+  animation: ${AnimateImage} forwards 1s;
 
-  animation-delay: 0.62s;
+  animation-delay: 1.15s;
+  border-radius: 14px;
 `;

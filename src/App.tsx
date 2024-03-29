@@ -11,12 +11,8 @@ export default function App() {
     <>
       <Styled.GlobalStyle />
       <Styled.Main>
-        <Left />
-        <Right />
-        <Styled.Container>
-          <Header />
-          <Content />
-        </Styled.Container>
+        <Header />
+        <Content />
       </Styled.Main>
     </>
   );
