@@ -41,9 +41,6 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Main = styled.main`
-  padding: 1rem;
-  height: 100vh;
-
   &::before {
     content: "";
     display: block;
@@ -64,14 +61,13 @@ export const Main = styled.main`
     content: "";
     display: block;
 
-    width: 50vw;
     height: 100%;
 
     background-color: rgba(251, 194, 195, 1);
 
     position: absolute;
     top: 0;
-    left: 50vw;
+    right: 0;
 
     animation: ${Left} forwards 1s;
   }

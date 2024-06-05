@@ -40,8 +40,6 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
-  /* margin-top: 1rem; */
-
   position: relative;
   z-index: 1000;
 `;
